@@ -1,11 +1,11 @@
 import './App.css';
-import BucketList from './components/BucketList';
+import Header from './components/Header';
 
 function App() {
   return (
     <div>
-      <div className="bucket-app">
-        <BucketList />
+      <div className="app">
+        <Header/>
       </div>
       <footer>
         Created by <strong>Jeremy🦈</strong> <br></br>
