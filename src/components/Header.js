@@ -4,9 +4,9 @@ function Header () {
   return (
     <div>
       <header>
-      <img class='avatar-image' src="./assets/Fred-the-fish.png" alt="Fred-the-fish">
+      <img class='avatar-image' src="./assets/Fred-the-fish.png" alt="Fred-the-fish"></img>
       <div class="portfolio-title">Jeremy Decherat</div>
-      </img>
+      
       </header>
 
       <div class="details">
