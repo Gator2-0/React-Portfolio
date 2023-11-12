@@ -1,14 +1,25 @@
+import './reset.css';
 import './App.css';
-import Header from './components/Header';
-import Portfolio from './components/portfolio';
+import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
+//import Header from './components/header';
+import NotFound from './pages/NotFound';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div>
-      <div className="app">
-        <Header/>
-        <Portfolio/>
-      </div>
+    <div className='app'>
+        <Router>
+          <Routes>
+            <Route
+              path='/'
+              element={<Home/>}
+            />
+            <Route 
+              path="*"
+              element={<NotFound />}
+            />
+          </Routes>
+        </Router>
       <footer>
         Created by <strong>Jeremy🦈</strong> <br></br>
         last updated: June 2023 - V2
