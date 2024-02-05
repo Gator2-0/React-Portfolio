@@ -10,24 +10,30 @@ const Home = () => {
       </Row>
       <Row>
         <Col>
-          <Link to="/NotFound.js">
+          <Link to="/Projects">
             <Card className='projects'>
               {/* Content for projects card */}
               Card to access all projects
             </Card>
           </Link>         
         </Col>
-        <Col>         
-          <Card className='bio'>
-            {/* Content for bio card */}
-            Card to access my Bio
-          </Card>
+        <Col>   
+          <Link to="/Bio">
+            <Card className='bio'>
+              {/* Content for bio card */}
+              Card to access my Bio
+            </Card>
+          </Link>      
+          
         </Col>
         <Col>
+        <Link to="/Contact">
           <Card className='contacts'>
             {/* Content for contacts card */}
             Card to access my Contacts
-          </Card>         
+          </Card> 
+        </Link>
+                  
         </Col>
       </Row>
     </Container>
