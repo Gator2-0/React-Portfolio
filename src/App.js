@@ -1,10 +1,11 @@
 import './reset.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 //import Header from './components/header';
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
+import Projects from './pages/Projects'
 
 function App() {
   return (
@@ -19,6 +20,11 @@ function App() {
               path="*"
               element={<NotFound />}
             />
+            <Route
+              path='/Projects'
+              element={<Projects />}
+            />
+            
           </Routes>
         </Router>
       <footer>

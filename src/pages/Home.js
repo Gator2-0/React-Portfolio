@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -9,12 +10,12 @@ const Home = () => {
       </Row>
       <Row>
         <Col>
-          <Card className='projects'>
-            {/* Content for projects card */}
-            <Card.Text>
-            Card to access all projects
-            </Card.Text>
-          </Card>
+          <Link to="/NotFound.js">
+            <Card className='projects'>
+              {/* Content for projects card */}
+              Card to access all projects
+            </Card>
+          </Link>         
         </Col>
         <Col>         
           <Card className='bio'>
