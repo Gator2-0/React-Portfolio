@@ -8,25 +8,25 @@ const Home = () => {
         There will be some punchline here
       </Row>
       <Row>
-        <Col xs={12} md={8}>
+        <Col>
           <Card className='projects'>
             {/* Content for projects card */}
+            <Card.Text>
             Card to access all projects
+            </Card.Text>
           </Card>
         </Col>
-        <Col xs={12} md={4}>
-          <Row className='bio'>
-            <Card>
-              {/* Content for bio card */}
-              Card to access my Bio
-            </Card>
-          </Row>
-          <Row className='contacts'>
-            <Card>
-              {/* Content for contacts card */}
-              Card to access my Contacts
-            </Card>
-          </Row>
+        <Col>         
+          <Card className='bio'>
+            {/* Content for bio card */}
+            Card to access my Bio
+          </Card>
+        </Col>
+        <Col>
+          <Card className='contacts'>
+            {/* Content for contacts card */}
+            Card to access my Contacts
+          </Card>         
         </Col>
       </Row>
     </Container>

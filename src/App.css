@@ -6,11 +6,12 @@
 
 .punch{
   font-size: 150px;
+  text-align: center;
 }
 
 .projects{
   min-height: 50px;
-  background-color: wheat;
+  background-color: blue;
 }
 
 .bio{
@@ -19,5 +20,8 @@
 }
 .contacts{
   min-height: 50px;
-  background-color: wheat;
+  background-color: green;
+}
+footer{
+  text-align: center;
 }

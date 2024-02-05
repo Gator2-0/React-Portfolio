@@ -1,6 +1,7 @@
 import './reset.css';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 //import Header from './components/header';
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
