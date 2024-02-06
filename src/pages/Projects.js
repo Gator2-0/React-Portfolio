@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Textfit } from 'react-textfit';
 
 const ProjectsPage = () => {
   const [repositories, setRepositories] = useState([]);
@@ -16,6 +17,7 @@ const ProjectsPage = () => {
         }
 
         const data = await response.json();
+        console.log(data); // for checking the data structure
         setRepositories(data);
       } catch (error) {
         console.error('Error fetching repositories:', error.message);
@@ -32,10 +34,10 @@ const ProjectsPage = () => {
       </Row>
       <Row>
         {repositories.map(repo => (
-          <Col>
-            <Card className='customCard' key={repo.id}>
-              <Card.Title>{repo.name}</Card.Title>
-              <p>{repo.description}</p>
+          <Col key={repo.id}>
+            <Card className='customCard' >
+              <Card.Title><Textfit>{repo.name}</Textfit></Card.Title>
+              <Card.Text><Textfit>{repo.description}</Textfit></Card.Text>
               {/* Add more details or components as needed */}
             </Card>
           </Col>

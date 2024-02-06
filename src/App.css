@@ -13,9 +13,9 @@
 }
 .customCard{
   height: 200px;
-
-  font-size: 50px;
+  width: 200px;
   text-align: center;
+  margin: 10px;
 }
 
 .link{
