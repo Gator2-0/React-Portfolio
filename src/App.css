@@ -3,14 +3,14 @@
   background-color: black;
   color: white;
 }
-h1{
-  color: beige;
-}
 
 .punch{
-  height: 300px;
-  font-size: 150px;
+  height: 35vh;
+  font-size: ;
   text-align: center;
+}
+.cards-row{
+  height: 35vh;
 }
 .customCard{
   min-height: 200px;
@@ -23,5 +23,7 @@ h1{
 }
 
 footer{
+  height: 30vh;
   text-align: center;
+  
 }

@@ -1,14 +1,15 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Textfit } from 'react-textfit';
 
 const Home = () => {
   return (
     <Container>
       <Row className='punch'>
-      You don't become a developer by studying, you become one by practicing!!
+      <Textfit>You don't become a developer by studying, you become one by practicing!!</Textfit>
       </Row>
-      <Row>
+      <Row className='cards-row'>
         <Col>
           <Link className='link' to="/Projects">
             <Card body className='customCard'>
