@@ -8,23 +8,20 @@ h1{
 }
 
 .punch{
+  height: 300px;
   font-size: 150px;
   text-align: center;
 }
-
-.projects{
-  min-height: 50px;
-  background-color: blue;
+.customCard{
+  min-height: 200px;
+  font-size: 50px;
+  text-align: center;
 }
 
-.bio{
-  min-height: 50px;
-  background-color: wheat;
+.link{
+  text-decoration: none;
 }
-.contacts{
-  min-height: 50px;
-  background-color: green;
-}
+
 footer{
   text-align: center;
 }

@@ -6,31 +6,31 @@ const Home = () => {
   return (
     <Container>
       <Row className='punch'>
-        There will be some punchline here
+      You don't become a developer by studying, you become one by practicing!!
       </Row>
       <Row>
         <Col>
-          <Link to="/Projects">
-            <Card className='projects'>
+          <Link className='link' to="/Projects">
+            <Card body className='customCard'>
               {/* Content for projects card */}
-              Card to access all projects
+              Have a look at my projects
             </Card>
           </Link>         
         </Col>
         <Col>   
-          <Link to="/Bio">
-            <Card className='bio'>
+          <Link className='link' to="/Bio">
+            <Card body className='customCard'>
               {/* Content for bio card */}
-              Card to access my Bio
+              Who am I?
             </Card>
           </Link>      
           
         </Col>
         <Col>
-        <Link to="/Contact">
-          <Card className='contacts'>
+        <Link className='link' to="/Contact">
+          <Card body className='customCard'>
             {/* Content for contacts card */}
-            Card to access my Contacts
+            If you want to contact me
           </Card> 
         </Link>
                   
