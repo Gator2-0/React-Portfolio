@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 const ProjectsPage = () => {
   const [repositories, setRepositories] = useState([]);
@@ -25,18 +26,23 @@ const ProjectsPage = () => {
   }, []); 
 
   return (
-    <div>
-      <h1>Projects</h1>
-      <div>
+    <Container>
+      <Row>
+        <h1>Projects</h1>
+      </Row>
+      <Row>
         {repositories.map(repo => (
-          <div key={repo.id}>
-            <h3>{repo.name}</h3>
-            <p>{repo.description}</p>
-            {/* Add more details or components as needed */}
-          </div>
+          <Col>
+            <Card className='customCard' key={repo.id}>
+              <Card.Title>{repo.name}</Card.Title>
+              <p>{repo.description}</p>
+              {/* Add more details or components as needed */}
+            </Card>
+          </Col>
         ))}
-      </div>
-    </div>
+        </Row>
+      
+    </Container>
   );
 };
 
