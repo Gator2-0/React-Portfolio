@@ -6,9 +6,6 @@ import { Textfit } from 'react-textfit';
 const Home = () => {
   return (
     <Container>
-      <Row className='punch'>
-      <Textfit>You don't become a developer by studying, you become one by practicing!!</Textfit>
-      </Row>
       <Row className='cards-row'>
         <Col>
           <Link className='link' to="/Projects">

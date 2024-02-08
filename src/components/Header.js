@@ -1,8 +1,23 @@
-import React, { useState } from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Textfit } from 'react-textfit';
 
 function Header () {  
   return (
-    <div>
+    <Container>
+      <Row className='punch'>
+      <Textfit>You don't become a developer by studying, you become one by practicing!!</Textfit>
+      </Row>
+    </Container>
+    
+  )
+}
+
+export default Header;
+
+/*
+Previous Header looked like that
+<div>
       <header>
       <img class='avatar-image' src="./assets/Fred-the-fish.png" alt="Fred-the-fish"></img>
       <div class="portfolio-title">Jeremy Decherat</div>
@@ -39,7 +54,4 @@ function Header () {
   
       </div>
     </div>
-  )
-}
-
-export default Header;
+*/
