@@ -6,16 +6,17 @@ import { Textfit } from 'react-textfit';
 
 function Header () {  
   return (
-    <Container>
-      <Row className='punch'>
-        <Col>
+    <Container className='punch '>
+      <Row >
+        <Col sm={2} className="d-flex justify-content-center align-items-center">
           <Link to="/">
             <Button variant="outline-light" size="lg">Home</Button>{' '}
           </Link>
         </Col>
-        <Col>
-          <Textfit>You don't become a developer by studying, you become one by practicing!!</Textfit>
+        <Col sm={10} >
+          <Textfit min={50} >You don't become a developer by studying, you become one by practicing!!</Textfit>
         </Col>
+
       </Row>
     </Container>
     
