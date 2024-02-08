@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { Textfit } from 'react-textfit';
+import { Link } from 'react-router-dom';
 
 const ProjectsPage = () => {
   const [repositories, setRepositories] = useState([]);
@@ -35,12 +35,14 @@ const ProjectsPage = () => {
       <Row>
         {repositories.map(repo => (
           <Col key={repo.id}>
-            <Card className='customCard' >
-              <Card.Title>{repo.name}</Card.Title>
-              <Card.Subtitle>{repo.language}</Card.Subtitle>
-              <Card.Body>{repo.html_url}</Card.Body>
-              {/* Add more details or components as needed */}
-            </Card>
+            <Link className='link' to={repo.html_url} target="_blank" rel="noopener noreferrer">
+              <Card className='customCard' >
+                <Card.Title>{repo.name}</Card.Title>
+                <Card.Subtitle>{repo.language}</Card.Subtitle>
+                <Card.Body>{repo.html_url}</Card.Body>
+                {/* Add more details or components as needed */}
+              </Card>
+            </Link>
           </Col>
         ))}
         </Row>
