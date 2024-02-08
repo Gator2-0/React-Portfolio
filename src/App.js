@@ -12,8 +12,9 @@ import Contact from'./pages/Contact';
 function App() {
   return (
     <div className='app'>
-      <Header></Header>
+      
         <Router>
+          <Header/>
           <Routes>
             <Route
               path='/'

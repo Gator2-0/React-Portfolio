@@ -1,4 +1,6 @@
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import React from 'react';
+import { Container, Row, Col} from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import { Textfit } from 'react-textfit';
 
@@ -6,7 +8,14 @@ function Header () {
   return (
     <Container>
       <Row className='punch'>
-      <Textfit>You don't become a developer by studying, you become one by practicing!!</Textfit>
+        <Col>
+          <Link to="/">
+            <Button variant="outline-light" size="lg">Home</Button>{' '}
+          </Link>
+        </Col>
+        <Col>
+          <Textfit>You don't become a developer by studying, you become one by practicing!!</Textfit>
+        </Col>
       </Row>
     </Container>
     
