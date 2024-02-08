@@ -39,7 +39,9 @@ const ProjectsPage = () => {
               <Card className='customCard' >
                 <Card.Title>{repo.name}</Card.Title>
                 <Card.Subtitle>{repo.language}</Card.Subtitle>
-                <Card.Body>{repo.html_url}</Card.Body>
+                <Card.Body style={{ maxHeight: '300px', overflowY: 'auto' }} className="custom-scrollbar">
+                  {repo.description}
+                  </Card.Body>
                 {/* Add more details or components as needed */}
               </Card>
             </Link>
