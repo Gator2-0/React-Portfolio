@@ -16,7 +16,6 @@ function Header () {
         <Col sm={10} >
           <Textfit min={50} >You don't become a developer by studying, you become one by practicing!!</Textfit>
         </Col>
-
       </Row>
     </Container>
     

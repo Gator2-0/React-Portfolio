@@ -36,8 +36,9 @@ const ProjectsPage = () => {
         {repositories.map(repo => (
           <Col key={repo.id}>
             <Card className='customCard' >
-              <Card.Title><Textfit>{repo.name}</Textfit></Card.Title>
-              <Card.Text><Textfit>{repo.description}</Textfit></Card.Text>
+              <Card.Title>{repo.name}</Card.Title>
+              <Card.Subtitle>{repo.language}</Card.Subtitle>
+              <Card.Body>{repo.html_url}</Card.Body>
               {/* Add more details or components as needed */}
             </Card>
           </Col>
