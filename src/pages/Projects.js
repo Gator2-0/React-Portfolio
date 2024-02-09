@@ -4,6 +4,13 @@ import { Link } from 'react-router-dom';
 
 const ProjectsPage = () => {
   const [repositories, setRepositories] = useState([]);
+  //let cardKey = 0;
+
+  const handleMouseEnter = (key) => {
+    console.log('Mouse entered the element!'+ (key+1));
+    // You can perform any action or update state here
+  };
+  
   
   useEffect(() => {
     const fetchRepositories = async () => {
@@ -33,16 +40,15 @@ const ProjectsPage = () => {
         <h1>Projects</h1>
       </Row>
       <Row>
-        {repositories.map(repo => (
-          <Col key={repo.id}>
+        {repositories.map((repo, index) => (
+          <Col key={index+1} onMouseEnter={() => handleMouseEnter(index)}>
             <Link className='link' to={repo.html_url} target="_blank" rel="noopener noreferrer">
               <Card className='customCard' >
                 <Card.Title>{repo.name}</Card.Title>
                 <Card.Subtitle>{repo.language}</Card.Subtitle>
                 <Card.Body style={{ maxHeight: '300px', overflowY: 'auto' }} className="custom-scrollbar">
                   {repo.description}
-                  </Card.Body>
-                {/* Add more details or components as needed */}
+                </Card.Body>
               </Card>
             </Link>
           </Col>
