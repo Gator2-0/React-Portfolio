@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+//import { Container, Row, Col, Card } from 'react-bootstrap';
+//import { Link } from 'react-router-dom';
 
 const ProjectsPage = () => {
   const [repositories, setRepositories] = useState([]);
@@ -28,11 +28,28 @@ const ProjectsPage = () => {
   }, []); 
 
   return (
+    <section className='cards-body'>
+      <div id="cards">
+      {repositories.map((repo, index) => {
+          index++
+          return (
+            <div key={index} className="card">
+              <div className="card-border"></div>
+              <div className="card-content"></div>
+            </div>
+          )
+      })
+      }
+      </div>
+
+    </section>
+    
+    /* 
     <Container>
       <Row>
         <h1>Projects</h1>
       </Row>
-      <Row>
+      <Row className='cards'> 
         {repositories.map((repo, index) => {
           index++
           return (
@@ -52,6 +69,7 @@ const ProjectsPage = () => {
         </Row>
       
     </Container>
+    */
   );
 };
 

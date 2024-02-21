@@ -1,5 +1,20 @@
+:root {
+  --bg-color: rgb(20,20,20);
+  --card-color: rgb(23,23,23);
+}
+
+.cards-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  margin: 0px;
+  overflow: auto;
+  padding: 0px;
+}
+
+
 .app{
-  min-height: 100vh;
   background-color: black;
   color: white;
 }
@@ -9,25 +24,97 @@
   text-align: center;
   padding-top: 2vh;
 }
-.cards-row{
-  height: 35vh;
-}
-.customCard{
-  height: 200px;
-  width: 200px;
-  text-align: center;
-  margin: 10px;
-  border-radius: 10%;
-  padding-top: 5px;
-  margin-bottom: 15px;
-  box-shadow: 0px 10px 10px 0px rgba(255, 0, 0, 0.5);
+
+/* Section for the Projects cards in project*/
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 922px;
+  width: calc(100% - 20px);
 }
 
+#cards:hover > .card > .card-border{
+  opacity: 1;
+}
+
+.card {
+  background-color: rgba(255,255,255,0.15);
+  cursor: pointer;
+  height: 260px;
+  width: 300px;
+  border-radius: 10px;
+  position: relative;
+  
+}
+.card:hover::before{
+  opacity: 1;
+}
+
+.card::before,
+.card > .card-border
+{
+  border-radius: inherit;
+  content: "";
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 500ms;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index:2;
+}
+
+.card::before{
+  background: radial-gradient(
+  800px circle at var(--mouse-x) var(--mouse-y),
+  rgba(255,255,255,0.06),
+  transparent 40%);
+  z-index: 3;
+}
+
+.card > .card-border{
+  background: radial-gradient(
+  400px circle at var(--mouse-x) var(--mouse-y),
+  rgba(255,255,255,0.3),
+  transparent 40%);
+  z-index: 1;
+}
+
+.card > .card-content {
+  background-color: var(--card-color);
+  border-radius: inherit;
+  margin: 1px;
+  position: relative;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  z-index: 2;
+}
+/*old CSS for Carsd using bootstrap*/
+/*.cards{
+  justify-content: center;
+}
+
+
+.customCard{
+  height: 260px;
+  width: 330px;
+  text-align: center;
+  border-radius: 10%;
+  padding-top: 5px;
+  box-shadow: 0px 10px 10px 0px rgba(255, 0, 0, 0.5);
+  margin:0;
+}
+*/
+/*
 .customCard:hover{
   transform: scale(1.1) translateY(-5px);
   
   box-shadow: 0px 10px 20px 2px rgba(255, 0, 0, 0.5);
 }
+*/
 
 /* Style the scrollbar track */
 .custom-scrollbar::-webkit-scrollbar {
