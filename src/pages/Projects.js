@@ -1,9 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 //import { Container, Row, Col, Card } from 'react-bootstrap';
 //import { Link } from 'react-router-dom';
 
 const ProjectsPage = () => {
   const [repositories, setRepositories] = useState([]);
+  const handleMouseMove = (e) => {
+    const cards = document.getElementsByClassName("card");
+
+    Array.from(cards).forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+    });
+  };
 
   useEffect(() => {
     const fetchRepositories = async () => {
@@ -29,7 +41,7 @@ const ProjectsPage = () => {
 
   return (
     <section className='cards-body'>
-      <div id="cards">
+      <div id="cards" onMouseMove={handleMouseMove}>
       {repositories.map((repo, index) => {
           index++
           return (
