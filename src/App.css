@@ -5,12 +5,14 @@
 
 .cards-body {
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: center;
   background-color: black;
   margin: 0px;
   overflow: auto;
   padding: 0px;
+  margin-top: 1px;
+  flex: 1;
 }
 
 
@@ -18,6 +20,8 @@
   background-color: black;
   color: white;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .punch{
@@ -31,8 +35,8 @@
 #cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  max-width: 922px;
+  gap: 10px;
+  max-width: 930px;
   width: calc(100% - 20px);
 }
 
@@ -43,7 +47,7 @@
 .card {
   background-color: rgba(255,255,255,0.15);
   cursor: pointer;
-  height: 260px;
+  height: 262px;
   width: 300px;
   border-radius: 10px;
   position: relative;
@@ -79,7 +83,7 @@
 .card > .card-border{
   background: radial-gradient(
   400px circle at var(--mouse-x) var(--mouse-y),
-  rgba(255,255,255,0.3),
+  rgba(25,255,255,0.3),
   transparent 40%);
   z-index: 1;
 }
@@ -113,9 +117,37 @@ i {
   justify-content: center;
   object-fit: contain;
   overflow: hidden;
+  margin-top: 2px;
 }
 img{
-  height: 100%
+  height: 100%;
+  border-radius: 5px;
+}
+
+.card-info-wrapper {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+  padding: 0px 20px;
+}
+
+.card-info {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1px;
+}
+
+.card-info-title > h3 {
+  font-size: 1.1em;
+  line-height: 20px;
+}
+
+.card-info-title > h4 {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85em;
+  margin-top: 8px;
 }
 
 /* Style the scrollbar track */
@@ -139,7 +171,9 @@ img{
 }
 
 footer{
-  height: 30vh;
+  height: 15vh;
   text-align: center;
+  align-items: end;
+  flex-shrink: 0;
   
 }
