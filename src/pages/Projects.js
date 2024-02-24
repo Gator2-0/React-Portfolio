@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 //import { Container, Row, Col, Card } from 'react-bootstrap';
 //import { Link } from 'react-router-dom';
 
@@ -39,6 +39,12 @@ const ProjectsPage = () => {
     fetchRepositories();
   }, []); 
 
+  const languageimage = {
+    JavaScript: '/logo-javascript.svg',
+    HTML: '/logo-html.svg',
+    CSS: '/logo-css.svg'
+  }
+
   return (
     <section className='cards-body'>
       <div id="cards" onMouseMove={handleMouseMove}>
@@ -47,7 +53,21 @@ const ProjectsPage = () => {
           return (
             <div key={index} className="card">
               <div className="card-border"></div>
-              <div className="card-content"></div>
+              <div className="card-content">
+                <div className="card-image">
+                <img 
+                  src={process.env.PUBLIC_URL + languageimage[repo.language]} 
+                  alt= {`A ${repo.language} logo`}/>
+                </div>
+                <div className="card-info-wrapper">
+                  <div className="card-info">
+                    <div className="card-info-title">
+                      <h3>{repo.name}</h3>  
+                      <h4>{repo.description}</h4>
+                    </div>    
+                  </div>
+                </div>
+              </div>
             </div>
           )
       })
@@ -56,32 +76,6 @@ const ProjectsPage = () => {
 
     </section>
     
-    /* 
-    <Container>
-      <Row>
-        <h1>Projects</h1>
-      </Row>
-      <Row className='cards'> 
-        {repositories.map((repo, index) => {
-          index++
-          return (
-            <Col key={index} >
-              <Link className='link' to={repo.html_url} target="_blank" rel="noopener noreferrer">
-                <Card className='customCard' >
-                  <Card.Title>{repo.name}</Card.Title>
-                  <Card.Subtitle>{repo.language}</Card.Subtitle>
-                  <Card.Body style={{ maxHeight: '300px', overflowY: 'auto' }} className="custom-scrollbar">
-                    {repo.description}
-                  </Card.Body>
-                </Card>
-              </Link>
-            </Col>
-          )
-        })}
-        </Row>
-      
-    </Container>
-    */
   );
 };
 

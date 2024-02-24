@@ -92,29 +92,30 @@
   width: calc(100% - 2px);
   z-index: 2;
 }
-/*old CSS for Carsd using bootstrap*/
-/*.cards{
+
+/* style for the card content*/
+h1, h2, h3, h4, span {
+  color: rgb(240, 240, 240);
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  margin: 0px;
+}
+
+i {  
+  color: rgb(240, 240, 240);
+}
+
+.card-image {
+  align-items: center;
+  display: flex;
+  height: 140px;
   justify-content: center;
+  object-fit: contain;
+  overflow: hidden;
 }
-
-
-.customCard{
-  height: 260px;
-  width: 330px;
-  text-align: center;
-  border-radius: 10%;
-  padding-top: 5px;
-  box-shadow: 0px 10px 10px 0px rgba(255, 0, 0, 0.5);
-  margin:0;
+img{
+  height: 100%
 }
-*/
-/*
-.customCard:hover{
-  transform: scale(1.1) translateY(-5px);
-  
-  box-shadow: 0px 10px 20px 2px rgba(255, 0, 0, 0.5);
-}
-*/
 
 /* Style the scrollbar track */
 .custom-scrollbar::-webkit-scrollbar {
