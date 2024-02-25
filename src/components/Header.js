@@ -11,16 +11,8 @@ function Header () {
         <Col sm={2} className="d-flex justify-content-center align-items-center">
           
           <Link to="/">
-            <Button variant="outline-light" size="lg">Home</Button>{' '}
+            <Button className='home-button' variant="outline-light" size="lg">Home</Button>{' '}
           </Link>
-          
-          
-          <label className="switch">
-            <input type="checkbox"/>
-            <span className="slider round"></span>
-            <p style={{marginTop:'10px'}}>Light</p>
-          </label>
-         
         </Col>
         <Col sm={10} >
           <Textfit min={50} >You don't become a developer by studying, you become one by practicing!!</Textfit>
