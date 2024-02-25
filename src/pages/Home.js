@@ -18,14 +18,14 @@ const Home = () => {
         
         </div>
       </Link>
-      <Link to={'/Bio'}>
+      <Link to={'Bio'}>
         <div className='card'>
           <div className="card-border"></div>
           <div className="card-content">    
           </div>
         </div>
       </Link>
-      <Link to={'/Contact'}>
+      <Link to={'Contact'}>
         <div className='card'>
           <div className="card-border"></div>
           <div className="card-content">    
