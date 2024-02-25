@@ -11,7 +11,7 @@ import Contact from'./pages/Contact';
 
 function App() {
   return (
-    <div className='app'>
+    <div className='app' data-theme="light">
       
         <Router>
           <Header/>
