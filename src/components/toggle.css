@@ -1,0 +1,42 @@
+.toggle-container {
+  position: absolute;
+  top: 0px;
+  left: 50px;
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.toggle + label{
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--primary-text-color);
+}
+
+.toggle + label::before {
+  content: "";
+  height: 30px;
+  width: 60px;
+  border-radius: 15px;
+  background-color: var(--toggle-bg);
+  margin-right: 5px;
+  transition: background-color 250ms ease-in-out;
+}
+
+.toggle + label::after{
+  content: "";
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  background-color: var(--toggle-fg);
+  position: absolute;
+  left: 5px;
+  transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
+}
+
+.toggle:checked + label::after{
+  transform: translateX(100%);
+}

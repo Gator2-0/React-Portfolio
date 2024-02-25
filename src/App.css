@@ -24,18 +24,6 @@
 
 }
 
-.cards-body {
-  display: flex;
-  align-items: top;
-  justify-content: center;
-  background-color: var(--background-color);
-  margin: 0px;
-  overflow: auto;
-  padding: 0px;
-  margin-top: 1px;
-  flex: 1;
-}
-
 
 .app{
   background-color: var(--background-color);
@@ -43,6 +31,10 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.app.cards-body{ 
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
 }
 
 /* Header CSS*/
@@ -121,6 +113,18 @@ input:checked + .slider:before {
 
 
 /* Section for the Projects cards in project*/
+
+.cards-body {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  background-color: var(--background-color);
+  margin: 0px;
+  overflow: auto;
+  padding: 0px;
+  margin-top: 1px;
+  flex: 1;
+}
 
 #cards {
   display: flex;
