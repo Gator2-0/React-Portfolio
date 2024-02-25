@@ -8,22 +8,30 @@ const Home = () => {
   return (
     <section className='cards-body'>
       <div id='cards' onMouseMove={handleMouseMove}>
+      <Link to={'Projects'} className='card-link'>
+        <div className='card'>
+       
+          <div className="card-border"></div>
+          
+          <div className="card-content">    
+          </div>
+        
+        </div>
+      </Link>
+      <Link to={'/Bio'}>
         <div className='card'>
           <div className="card-border"></div>
           <div className="card-content">    
           </div>
         </div>
-      
+      </Link>
+      <Link to={'/Contact'}>
         <div className='card'>
           <div className="card-border"></div>
           <div className="card-content">    
           </div>
         </div>
-        <div className='card'>
-          <div className="card-border"></div>
-          <div className="card-content">    
-          </div>
-        </div>
+      </Link>  
       </div>
   </section>
   );
