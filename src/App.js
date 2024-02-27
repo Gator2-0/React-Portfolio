@@ -10,7 +10,6 @@ import Bio from './pages/Bio';
 import Contact from'./pages/Contact';
 import Codes from './pages/Codes'
 import React from 'react';
-import { Toggle } from './components/toggle';
 import useLocalStorage from 'use-local-storage'
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
   const userPreference = window.matchMedia("(prefers-color-scheme: light)").matches;
   console.log(userPreference);
   //useLocalstorage- first value is the key and second is the default value fo the key.
-  const [isLight, setIsLight] = useLocalStorage("isLight", userPreference);
+  const [isLight] = useLocalStorage("isLight", userPreference);
 
   return (
     <div className='app' data-theme={isLight ? "light":"dark"}>
