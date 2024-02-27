@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 //import { Link } from 'react-router-dom';
 import {handleMouseMove} from '../utils/mouseHandler'
 
-const ProjectsPage = () => {
+const RepositoriesPage = () => {
   const [repositories, setRepositories] = useState([]);
   
 
@@ -69,4 +69,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default ProjectsPage;
+export default RepositoriesPage;

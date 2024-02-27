@@ -138,14 +138,13 @@
 }
 
 .card-link {
-  position: relative;
-  z-index: 4; /* Adjust the value as needed */
+  text-decoration: none;
 }
 
 
 /* style for the card content*/
 h1, h2, h3, h4, span {
-  color: rgb(240, 240, 240);
+  color: var(--primary-text-color);
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   margin: 0px;

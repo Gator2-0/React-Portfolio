@@ -5,9 +5,10 @@ import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 import Header from './components/header';
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
-import Projects from './pages/Projects';
+import Repositories from './pages/Repositories';
 import Bio from './pages/Bio';
 import Contact from'./pages/Contact';
+import Codes from './pages/Codes'
 import React from 'react';
 import { Toggle } from './components/toggle';
 import useLocalStorage from 'use-local-storage'
@@ -23,10 +24,7 @@ function App() {
     <div className='app' data-theme={isLight ? "light":"dark"}>
       
         <Router>
-          <Toggle
-            isChecked={isLight}
-            handleChange={() => setIsLight(!isLight)}
-          />
+          
           <Header/>
           <Routes>
             <Route
@@ -38,8 +36,8 @@ function App() {
               element={<NotFound />}
             />
             <Route
-              path='/Projects'
-              element={<Projects />}
+              path='/Repositories'
+              element={<Repositories />}
             />
             <Route
               path='/Bio'
@@ -48,6 +46,10 @@ function App() {
             <Route
               path='/Contact'
               element={<Contact />}
+            />
+            <Route
+              path='/Codes'
+              element={<Codes />}
             />
             
           </Routes>

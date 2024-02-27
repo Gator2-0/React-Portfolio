@@ -1,67 +1,62 @@
 import React from 'react';
-import { Container, Row, Col} from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
-import { Textfit } from 'react-textfit';
+// import { Container, Row, Col} from 'react-bootstrap';
+// import Button from 'react-bootstrap/Button';
+// import { Link } from 'react-router-dom';
+// import { Textfit } from 'react-textfit';
+
+import { Toggle } from './toggle';
+import useLocalStorage from 'use-local-storage';
 
 function Header () {  
+  // window.matchmedia let us matche the page them to the user preferred theme set on his windows.
+  const userPreference = window.matchMedia("(prefers-color-scheme: light)").matches;
+  console.log(userPreference);
+  //useLocalstorage- first value is the key and second is the default value fo the key.
+  const [isLight, setIsLight] = useLocalStorage("isLight", userPreference);
+
   return (
-    <Container className='punch '>
-      <Row >
-        <Col sm={2} className="d-flex justify-content-center align-items-center">
-          
-          <Link to="/">
-            <Button className='home-button' variant="outline-light" size="lg">Home</Button>{' '}
-          </Link>
-        </Col>
-        <Col sm={10} >
-          <Textfit min={50} >You don't become a developer by studying, you become one by practicing!!</Textfit>
-        </Col>
-      </Row>
-    </Container>
-    
+    <section className='header-container'>
+    <div className='header-text'>
+      Something cool to say about learning to code bla bla bla
+    </div>
+    <div className='header-navbar'>
+      <ul>
+        <li>
+          repositories
+        </li>
+        <li>
+          Bio
+        </li>
+        <li>
+          contact
+        </li>
+        <Toggle isChecked={isLight} handleChange={() => setIsLight(!isLight)}/>
+      </ul>
+
+    </div>
+
+   </section>
+   
   )
 }
 
 export default Header;
 
 /*
-Previous Header looked like that
-<div>
-      <header>
-      <img class='avatar-image' src="./assets/Fred-the-fish.png" alt="Fred-the-fish"></img>
-      <div class="portfolio-title">Jeremy Decherat</div>
-      
-      </header>
+<Navbar expand="lg" bg="black" data-bs-theme="dark" >
+    <Container>
+    <Toggle
+            isChecked={isLight}
+            handleChange={() => setIsLight(!isLight)}
+          />
+      <Navbar.Brand href='/'>Brand</Navbar.Brand>
+      <Nav className="me-auto">
+            <Nav.Link href="/Repositories">Repositories</Nav.Link>
+            <Nav.Link href="/Bio">Bio</Nav.Link>
+            <Nav.Link href="/Contact">Contact</Nav.Link>
+      </Nav>      
+    </Container>
 
-      <div class="details">
-        <div class="about-me-container">
-          <h1>About me</h1>
-          <p class="small-description">
-            I am a self taught programmer currently undertaking a full stack bootcamp. 
-            I have worked on personal project over the past 1 year and I now wish to become a full time developper.
-          </p>
-          <a href="#current-project-card">Most current Project</a>
-          <a href="#bottom">Bottom of the page</a>
-
-        </div>
-
-        <ul class="skills">
-          <li id="a">HTML</li>
-          <li id="b">CSS</li>
-          <li id="c">JavaScript</li>
-          <li id="d">C#</li>
-          <li id="e">PowerShell</li>
-          <li id="f">SQL</li>
-        </ul>
-
-        <div class="contact-details-container">
-          <a class="contact-details" href="http://www.linkedin.com/in/jeremy-decherat-9214b315b" target="_blank">visit my LinkedIn</a><br></br>
-          <a class="contact-details" href="https://github.com/Gator2-0" target="_blank">visit my Github</a><br></br>
-          <span class="contact-details">Jeremy.decherat@gmail.com</span><br></br>
-          <span class="contact-details">0451 642 300</span>
-        </div>
-  
-      </div>
-    </div>
+   </Navbar>
+    
 */
