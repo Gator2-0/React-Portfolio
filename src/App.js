@@ -23,7 +23,6 @@ function App() {
     <div className='app' data-theme={isLight ? "light":"dark"}>
       
         <Router>
-          
           <Header/>
           <Routes>
             <Route

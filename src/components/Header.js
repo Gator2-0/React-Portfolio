@@ -1,8 +1,5 @@
 import React from 'react';
-// import { Container, Row, Col} from 'react-bootstrap';
-// import Button from 'react-bootstrap/Button';
-// import { Link } from 'react-router-dom';
-// import { Textfit } from 'react-textfit';
+import './header.css';
 
 import { Toggle } from './toggle';
 import useLocalStorage from 'use-local-storage';

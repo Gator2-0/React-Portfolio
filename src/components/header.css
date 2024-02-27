@@ -1,0 +1,27 @@
+.header-container{
+  background-color: VAR(--background-color);
+  color: var(--primary-text-color);
+  height:20vh;
+  display: flex;
+}
+
+.header-text{
+  width:33%
+}
+
+.header-navbar{
+  width: 67%;
+  padding-right: 300px;
+  display: flex;
+  justify-content: end;
+}
+
+.header-navbar ul{
+  display: flex;
+}
+
+.header-navbar ul li{
+  margin: 50px;
+  font-size: 30px;
+  cursor: pointer;
+}
