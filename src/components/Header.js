@@ -1,10 +1,13 @@
 import React from 'react';
 import './header.css';
+import { Link, useLocation } from 'react-router-dom';
+
 
 import { Toggle } from './toggle';
 import useLocalStorage from 'use-local-storage';
 
-function Header () {  
+function Header () {
+  const location = useLocation();  
   // window.matchmedia let us matche the page them to the user preferred theme set on his windows.
   const userPreference = window.matchMedia("(prefers-color-scheme: light)").matches;
   console.log(userPreference);
@@ -13,28 +16,30 @@ function Header () {
 
   return (
     <section className='header-container'>
-    <div className='header-text'>
-      Something cool to say about learning to code bla bla bla
-    </div>
-    <div className='header-navbar'>
-      <ul>
-        <li >
-          <a href='/Repositories'>Repositories</a>
-        </li>
-        <li>
-          <a href='/Bio'>Bio</a>
-        </li>
-        <li>
-          <a href='/Contact'> Contact</a>
-        </li>
-        <Toggle isChecked={isLight} handleChange={() => setIsLight(!isLight)}/>
-      </ul>
-
-    </div>
-
-   </section>
-   
-  )
+      <div className='header-text'>
+        {location.pathname === '/' ? (
+          <div>Something cool to say about learning to code bla bla bla</div>
+        ) : (
+          <div>Home button</div>
+        )}
+      </div>
+      <div className='header-navbar'>
+        <ul>
+          <li>
+            <Link to='/Repositories'>Repositories</Link>
+          </li>
+          <li>
+            <Link to='/Bio'>Bio</Link>
+          </li>
+          <li>
+            <Link to='/Contact'>Contact</Link>
+          </li>
+          <Toggle isChecked={isLight} handleChange={() => setIsLight(!isLight)} />
+        </ul>
+      </div>
+    </section>
+  );
+  
 }
 
 export default Header;
