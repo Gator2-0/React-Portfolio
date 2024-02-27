@@ -18,14 +18,14 @@ function Header () {
     </div>
     <div className='header-navbar'>
       <ul>
-        <li>
-          repositories
+        <li >
+          <a href='/Repositories'>Repositories</a>
         </li>
         <li>
-          Bio
+          <a href='/Bio'>Bio</a>
         </li>
         <li>
-          contact
+          <a href='/Contact'> Contact</a>
         </li>
         <Toggle isChecked={isLight} handleChange={() => setIsLight(!isLight)}/>
       </ul>
