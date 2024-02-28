@@ -31,6 +31,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  
+  font-family: 'Permanet Marker',cursive;
 }
 
 .app.cards-body{ 

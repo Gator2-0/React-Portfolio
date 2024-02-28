@@ -18,7 +18,12 @@ function Header () {
     <section className='header-container'>
       <div className='header-text'>
         {location.pathname === '/' ? (
-          <div>Something cool to say about learning to code bla bla bla</div>
+          <div className='span-container'>
+            <span className="slide-in-text">This is some cool text</span>
+            <span className="slide-in-text">about the stuff</span>
+            <span className="slide-in-text">I can do and why</span>
+            <span className="slide-in-text">I like doing them so much!</span>
+          </div>
         ) : (
           <div>Home button</div>
         )}
