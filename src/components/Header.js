@@ -19,10 +19,10 @@ function Header () {
       <div className='header-text'>
         {location.pathname === '/' ? (
           <div className='span-container'>
-            <span className="slide-in-text">This is some cool text</span>
-            <span className="slide-in-text">about the stuff</span>
-            <span className="slide-in-text">I can do and why</span>
-            <span className="slide-in-text">I like doing them so much!</span>
+            <span className="slide-in-text">You don't become</span>
+            <span className="slide-in-text">a developper by studying</span>
+            <span className="slide-in-text">you become one</span>
+            <span className="slide-in-text">by practicing! a lot!!</span>
           </div>
         ) : (
           <div>Home button</div>
