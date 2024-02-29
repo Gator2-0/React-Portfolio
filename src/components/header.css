@@ -6,6 +6,7 @@
   z-index: 1;
 }
 
+/* styling of teh text in the header */
 .header-text{
   width:40%
 }
@@ -55,6 +56,7 @@
   }
 }
 
+/* styling of the menu part of the header */
 
 .header-navbar{
   width: 60%;
