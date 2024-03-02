@@ -20,12 +20,16 @@ function Header () {
         {location.pathname === '/' ? (
           <div className='span-container'>
             <span className="slide-in-text">You don't become</span>
-            <span className="slide-in-text">a developper by studying</span>
+            <span className="slide-in-text">a developer by studying</span>
             <span className="slide-in-text">you become one</span>
             <span className="slide-in-text">by practicing! a lot!!</span>
           </div>
         ) : (
-          <div>Home button</div>
+          <div className='home-container'>
+            <Link to={'/'} className='home-logo'>
+              <span >Home</span>
+            </Link>
+          </div>
         )}
       </div>
       <div className='header-navbar'>
