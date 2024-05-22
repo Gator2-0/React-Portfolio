@@ -35,13 +35,17 @@ const RepositoriesPage = () => {
     CSS: '/logo-css.svg'
   }
 
+  const handleRepoClick = (url) =>{
+    window.open(url, '_blank')
+  }
+
   return (
     <section className='cards-body'>
       <div id="cards" onMouseMove={handleMouseMove}>
       {repositories.map((repo, index) => {
           index++
           return (
-            <div key={index} className="card">
+            <div key={index} className="card" onClick={(()=>handleRepoClick(repo.html_url))}>
               <div className="card-border"></div>
               <div className="card-content">
                 <div className="card-image">
