@@ -14,6 +14,9 @@ function Header () {
   //useLocalstorage- first value is the key and second is the default value fo the key.
   const [isLight, setIsLight] = useLocalStorage("isLight", userPreference);
 
+  const slideColor = 'grey'
+  const color = isLight ? 'black' : 'white';
+
   return (
     <section className='header-container'>
       <div className='header-text'>
@@ -39,8 +42,8 @@ function Header () {
             <DominoSlide 
             content="Repositories" 
             fontSize="30px" 
-            color="black" 
-            slideColor="grey" />
+            color={color} 
+            slideColor={slideColor}/>
             </Link>
           </li>
           <li>
@@ -48,8 +51,8 @@ function Header () {
               <DominoSlide 
               content="Bio" 
               fontSize="30px" 
-              color="black" 
-              slideColor="grey" />
+              color={color} 
+              slideColor={slideColor} />
             </Link>
           </li>
           <li>
@@ -57,8 +60,8 @@ function Header () {
               <DominoSlide 
               content="Contact" 
               fontSize="30px" 
-              color="black" 
-              slideColor="grey" />
+              color={color} 
+              slideColor={slideColor} />
             </Link>
           </li>
           <Toggle isChecked={isLight} handleChange={() => setIsLight(!isLight)} />
