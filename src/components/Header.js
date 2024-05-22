@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css';
 import { Link, useLocation } from 'react-router-dom';
-
+import DominoSlide from 'gator-front';
 
 import { Toggle } from './toggle';
 import useLocalStorage from 'use-local-storage';
@@ -35,13 +35,31 @@ function Header () {
       <div className='header-navbar'>
         <ul>
           <li>
-            <Link to='/Repositories'>Repositories</Link>
+            <Link to='/Repositories'>
+            <DominoSlide 
+            content="Repositories" 
+            fontSize="30px" 
+            color="black" 
+            slideColor="grey" />
+            </Link>
           </li>
           <li>
-            <Link to='/Bio'>Bio</Link>
+            <Link to='/Bio'>
+              <DominoSlide 
+              content="Bio" 
+              fontSize="30px" 
+              color="black" 
+              slideColor="grey" />
+            </Link>
           </li>
           <li>
-            <Link to='/Contact'>Contact</Link>
+            <Link to='/Contact'>
+              <DominoSlide 
+              content="Contact" 
+              fontSize="30px" 
+              color="black" 
+              slideColor="grey" />
+            </Link>
           </li>
           <Toggle isChecked={isLight} handleChange={() => setIsLight(!isLight)} />
         </ul>
