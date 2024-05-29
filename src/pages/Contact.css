@@ -1,0 +1,15 @@
+.main{
+  height:60vh;
+}
+
+.centre{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.contact-details{
+  text-decoration: none;
+  padding-left: 50px;
+}
