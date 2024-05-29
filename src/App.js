@@ -54,7 +54,6 @@ function App() {
         </Router>
       <footer>
         Created by <strong>Jeremy🦈</strong> <br></br>
-        last updated: feb 2024 - V2
       </footer>
     </div>
   );
