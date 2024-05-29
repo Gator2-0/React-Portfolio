@@ -22,7 +22,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -r https://github.com/Gator2-0/React-Portfolio",
     "develop": "nodemon index.js",
     "start": "react-scripts start",
     "build": "react-scripts build",

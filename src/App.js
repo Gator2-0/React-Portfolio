@@ -22,7 +22,7 @@ function App() {
   return (
     <div className='app' data-theme={isLight ? "light":"dark"}>
       
-        <Router>
+        <Router basename='/React-Portfolio'>
           <Header/>
           <Routes>
             <Route
