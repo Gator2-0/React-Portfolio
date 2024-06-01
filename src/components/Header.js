@@ -64,8 +64,11 @@ function Header () {
               slideColor={slideColor} />
             </Link>
           </li>
-          <Toggle isChecked={isLight} handleChange={() => setIsLight(!isLight)} />
+          
         </ul>
+      </div>
+      <div className='header-toggle'>
+        <Toggle isChecked={isLight} handleChange={() => setIsLight(!isLight)} />
       </div>
     </section>
   );
@@ -74,21 +77,3 @@ function Header () {
 
 export default Header;
 
-/*
-<Navbar expand="lg" bg="black" data-bs-theme="dark" >
-    <Container>
-    <Toggle
-            isChecked={isLight}
-            handleChange={() => setIsLight(!isLight)}
-          />
-      <Navbar.Brand href='/'>Brand</Navbar.Brand>
-      <Nav className="me-auto">
-            <Nav.Link href="/Repositories">Repositories</Nav.Link>
-            <Nav.Link href="/Bio">Bio</Nav.Link>
-            <Nav.Link href="/Contact">Contact</Nav.Link>
-      </Nav>      
-    </Container>
-
-   </Navbar>
-    
-*/
