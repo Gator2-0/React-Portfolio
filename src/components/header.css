@@ -9,23 +9,22 @@
 
 /* styling of the text in the header */
 .header-text{
-  width:40%
+  width:20%
 }
 
 .span-container{
   display: flex;
   flex-direction: column;
-  font-size: 50px;
+  font-size: 5vh;
   position: relative;
-  margin-left: 50px;
-  margin-top: 50px;
+  top:5vh;
+  left: 5vh;
 
 }
 
 .slide-in-text{
-  display: bock;
+  display: block;
   opacity: 0;
-
   font-family: 'Permanet Marker';
 }
 
@@ -97,9 +96,10 @@
 /* styling of the menu part of the header */
 
 .header-navbar{
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: flex-end;
+  padding-right: 3vw;;
 }
 
 .header-navbar ul{
@@ -120,5 +120,57 @@
 
 .header-toggle{
   width: 10%;
-  margin-left: 4vw;
+  margin-left: 6vw;
+}
+
+@media screen and (max-width: 970px){
+  .header-container{
+    flex-direction: column;
+  }
+  .header-text{
+    width: 100vw;
+  }
+  .span-container{
+    top: 1vh;
+    left:1vh;
+  }
+
+  .header-navbar{
+    margin-top: 2vh;;
+    width: 100vw;
+    justify-content: center;
+  }
+  .header-navbar ul{
+    flex-direction: column;
+    
+  }
+  .header-navbar ul li{
+    margin:0;
+  }
+  
+}
+
+@media screen and (min-width: 971px) and (max-width: 1270px){
+
+  .header-text{
+    width: 30%
+  }
+  .span-container{
+    top: 2vh;
+    left: 2vh;
+    font-size: 4vh;
+  }
+
+  .header-navbar{
+    margin-top: 4vh;;
+    width: 50%;
+    justify-content: center;
+  }
+  .header-navbar ul{
+    flex-direction: column;
+  }
+  .header-navbar ul li{
+    margin:0;
+    
+  }
 }
