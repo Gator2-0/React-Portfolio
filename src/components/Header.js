@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './header.css';
 import { Link, useLocation } from 'react-router-dom';
 import DominoSlide from 'gator-front';
@@ -13,6 +13,24 @@ function Header () {
   console.log(userPreference);
   //useLocalstorage- first value is the key and second is the default value fo the key.
   const [isLight, setIsLight] = useLocalStorage("isLight", userPreference);
+  const [showText, setShowText] = useState(window.innerWidth >= 970);
+
+  const handleResize = () =>{
+    if(window.innerWidth <970){
+      setShowText(false)
+    }
+    else{
+      setShowText(true)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
 
   const slideColor = 'grey'
   const color = isLight ? 'black' : 'white';
@@ -68,7 +86,7 @@ function Header () {
         </ul>
       </div>
       <div className='header-toggle'>
-        <Toggle isChecked={isLight} handleChange={() => setIsLight(!isLight)} />
+        <Toggle isChecked={isLight} handleChange={() => setIsLight(!isLight)} isText={showText} />
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import "./toggle.css";
 
-export const Toggle = ({handleChange, isChecked}) => {
+export const Toggle = ({handleChange, isChecked, isText}) => {
   return(
     <div className="toggle-container">
       <input
@@ -10,7 +10,7 @@ export const Toggle = ({handleChange, isChecked}) => {
         onChange={handleChange}
         checked={isChecked}
       />
-      <label htmlFor="check">{isChecked? 'Dark' : 'Light'} Mode</label>
+      <label htmlFor="check">{isText? (isChecked? 'Dark Mode' : 'Light Mode') : ''} </label>
 
     </div>
   );
