@@ -1,7 +1,7 @@
 .header-container{
   background-color: VAR(--background-color);
   color: var(--primary-text-color);
-  height:20vh;
+  min-height:20vh;
   margin-bottom: 10px;
   display: flex;
   z-index: 1;
