@@ -47,7 +47,7 @@ function Header () {
           </div>
         ) : (
           <div className='home-container'>
-            <Link to={'/'} className='home-logo'>
+            <Link to={'/'} className='home-link'>
               <span >Home</span>
             </Link>
           </div>
