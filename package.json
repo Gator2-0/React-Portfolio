@@ -10,7 +10,7 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.3.0",
     "dotenv": "^16.3.1",
-    "gator-front": "^1.0.5",
+    "gator-front": "^1.0.7",
     "pretty": "^2.0.0",
     "react": "17.0.2",
     "react-bootstrap": "^2.9.1",
