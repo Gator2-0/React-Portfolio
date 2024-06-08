@@ -127,13 +127,14 @@
     
   }
   .header-navbar ul li{
-    width: 100vw;
+    width: 98vw;
     display: flex;
     justify-content: center;
     overflow: hidden;
     height:6vh;
     margin:1vh;
     border: 1px solid grey;
+    border-radius: 1vh;
   }
   
 }
