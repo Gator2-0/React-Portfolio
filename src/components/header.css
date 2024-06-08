@@ -127,7 +127,13 @@
     
   }
   .header-navbar ul li{
-    margin:0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height:6vh;
+    margin:1vh;
+    border: 1px solid grey;
   }
   
 }

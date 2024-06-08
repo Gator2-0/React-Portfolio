@@ -31,34 +31,10 @@
   color: var(--primary-text-color);
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column; 
   font-family: 'Permanet Marker';
 }
 
-.app.cards-body{ 
-  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
-}
-
-/* Header CSS*/
-
-.home-button{
-  border-color: var(--primary-text-color);
-  color: var(--primary-text-color);
-}
-
-.home-button:hover{
-  background-color: var(--foreground-color);
-  color: var(--secondary-text-color);
-  border-color: var(--secondary-text-color);
-}
 
 
 
-footer{
-  height: 15vh;
-  text-align: center;
-  align-items: end;
-  flex-shrink: 0;
-  
-}

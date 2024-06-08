@@ -1,0 +1,53 @@
+:root{
+  --p-font-size: 30px;
+  --background-color: rgba(0,0,0,1);
+}
+
+.home-container{
+  background-color: var(--background-color);
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+p{
+  font-size: var(--p-font-size);
+}
+
+.welcome-p{
+  opacity: 1;
+  font-size: var(--p-font-size);
+  margin-top: 90vh;
+  margin-bottom: 50vh;
+  animation: zoom-in linear forwards;
+  animation-timeline: scroll();
+  animation-range: enter 30vh;
+}
+
+@keyframes zoom-in {
+  to {scale: 4; opacity: 0;}
+} 
+
+.intro{
+  display: flex;
+  background-color: var(--background-color);
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+
+}
+.intro div{
+  width:40%;
+}
+
+
+@keyframes fade-in {
+  from {scale: 0.8; opacity: 0;}
+  to {scale: 1; opacity: 1;}
+}
+
+/* removin the scrollbar on the page for simpler design */
+body::-webkit-scrollbar {
+  display: none;
+}

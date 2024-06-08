@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 import Header from './components/header';
+import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
 import Repositories from './pages/Repositories';
@@ -20,8 +21,7 @@ function App() {
   const [isLight] = useLocalStorage("isLight", userPreference);
 
   return (
-    <div className='app' data-theme={isLight ? "light":"dark"}>
-      
+    <div className='app' data-theme={isLight ? "light":"dark"}>      
         <Router basename='/React-Portfolio'>
           <Header/>
           <Routes>
@@ -52,9 +52,7 @@ function App() {
             
           </Routes>
         </Router>
-      <footer>
-        Created by <strong>Jeremy🦈</strong> <br></br>
-      </footer>
+      <Footer/>
     </div>
   );
 }
