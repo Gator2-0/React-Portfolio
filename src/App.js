@@ -2,13 +2,13 @@ import './reset.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
-import Header from './components/header';
+import Header from './components/Header';
 import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
 import Repositories from './pages/Repositories';
 import Bio from './pages/Bio';
-import Contact from'./pages/Contact';
+import Contact from './pages/Contact';
 import Codes from './pages/Codes'
 import React from 'react';
 import useLocalStorage from 'use-local-storage'
