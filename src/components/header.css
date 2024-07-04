@@ -159,8 +159,12 @@
     flex-direction: column;
   }
   .header-navbar ul li{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
     width: 30vw;
-    align-items: center;
+    height: 5vh;
     border-radius: 14px;
     margin: 1vh;
     border: 1px solid grey;
