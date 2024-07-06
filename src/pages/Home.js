@@ -1,7 +1,8 @@
 import React from 'react';
 import './Home.css';
-import psScript from '../dominoImages/first-ps-script.png'
-import dashboard from '../dominoImages/dashboard.png'
+import psScript from '../dominoImages/first-ps-script.png';
+import dashboard from '../dominoImages/dashboard.png';
+import testFile from '../dominoImages/test-file.png'
 
 
 const Home = () => {
@@ -31,6 +32,18 @@ const Home = () => {
           <strong>building an app that would help further streamline my workflow.</strong> <br />
           After a longer-than-needed brainstorming on the app name, I started building it from the ground up.
           React would serve the front end and to favourise integration with other tools, Python would serve teh back end. 
+        </div>
+      </div>
+
+      <div className='story-container'>
+        <div className='story-text'>
+          One of the first tasks I wanted to simplify was upgrading customer's equipment.
+          Hours of tedious logging to units, downloading configuration files and setting up FTP parameters.
+          All of it is now done by the python server and updated information are rendered by react.
+
+        </div>
+        <div className='story-image'>
+          <img src={testFile} alt='image of the app ready to start upgrading radios'></img>
         </div>
       </div>
      
