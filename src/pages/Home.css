@@ -5,6 +5,7 @@
 
 .home-container{
   background-color: var(--home-background-color);
+  flex: 1;
   min-height: 100vh;
   color: var(--primary-text-color);
   display: flex;
@@ -12,44 +13,14 @@
   gap: 1em;
 }
 
-p{
-  font-size: var(--home-p-font-size);
-}
-
-.welcome-p{
-  opacity: 1;
-  font-size: var(--home-p-font-size);
-  margin-top: 90vh;
-  margin-bottom: 50vh;
-  animation: zoom-in linear forwards;
-  animation-timeline: scroll();
-  animation-range: enter 30vh;
-}
-
-@keyframes zoom-in {
-  to {scale: 4; opacity: 0;}
-} 
-
-.intro{
-  display: flex;
-  background-color: var(--home-background-color);
-  animation: fade-in linear forwards;
-  animation-timeline: view();
-
-}
-.intro div{
-  width:40%;
-}
-
-
-@keyframes fade-in {
-  from {scale: 0.8; opacity: 0;}
-  to {scale: 1; opacity: 1;}
-}
-
 /* removin the scrollbar on the page for simpler design */
 body::-webkit-scrollbar {
   display: none;
+}
+
+.scroll-intro{
+  font-size: var(--home-p-font-size);
+  height: 1000px;
 }
 
 .story-container{
