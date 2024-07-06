@@ -53,6 +53,10 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 970px){
+  .home-container{
+    justify-content: center;
+    align-items: center;
+  }
   .story-container{
     flex-direction: column;
   }
