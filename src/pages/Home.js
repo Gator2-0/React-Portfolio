@@ -43,7 +43,7 @@ const Home = () => {
 
         </div>
         <div className='story-image'>
-          <img src={testFile} alt='image of the app ready to start upgrading radios'></img>
+          <img src={testFile} alt='The app ready to start upgrading radios'></img>
         </div>
       </div>
      
