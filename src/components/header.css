@@ -5,6 +5,7 @@
   margin-bottom: 10px;
   display: flex;
   z-index: 1;
+  
 }
 
 /* styling of the text in the header */
@@ -59,15 +60,16 @@
 
 /* Home button styling*/
 
-.home-container{
+.home-button-container{
   height: 20vh;
+  width: 60vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
+  margin-top: 3vh;
 }
 
-.home-link{
+.home-button-link{
   text-decoration: none;
   font-size: 30px;
   font-family: 'Permanet Marker';
@@ -104,61 +106,80 @@
   margin-left: 6vw;
 }
 
-@media screen and (max-width: 970px){
-  .header-container{
+@media screen and (max-width: 970px) {
+  .header-container {
     flex-direction: column;
   }
-  .header-text{
+
+  .header-text {
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .span-container{
+
+  .span-container {
     top: 1vh;
-    left:1vh;
+    left: 1vh;
     font-size: 30px;
   }
 
-  .header-navbar{
-    margin-top: 2vh;;
+  .home-button-container{
+    border: 1px solid grey;
+    border-radius: 1vh;
+    height: 6vh;
+  }
+
+  .header-navbar {
+    margin-top: 2vh;
     width: 100vw;
     justify-content: center;
   }
-  .header-navbar ul{
+
+  .header-navbar ul {
     flex-direction: column;
-    
   }
-  .header-navbar ul li{
+
+  .header-navbar ul li {
     width: 98vw;
     display: flex;
     justify-content: center;
     overflow: hidden;
-    height:6vh;
-    margin:1vh;
+    height: 6vh;
+    margin: 1vh;
     border: 1px solid grey;
     border-radius: 1vh;
   }
-  
 }
 
-@media screen and (min-width: 971px) and (max-width: 1270px){
-
-  .header-text{
-    width: 30%
+@media screen and (min-width: 971px) and (max-width: 1270px) {
+  .header-text {
+    width: 30%;
   }
-  .span-container{
+
+  .span-container {
     top: 2vh;
     left: 2vh;
     font-size: 4vh;
   }
 
-  .header-navbar{
-    margin-top: 4vh;;
+  .home-button-container {
+    margin-top: 10vh;
+    height: 6vh;
+
+  }
+
+  .header-navbar {
+    margin-top: 4vh;
     width: 50%;
     justify-content: center;
   }
-  .header-navbar ul{
+
+  .header-navbar ul {
     flex-direction: column;
   }
-  .header-navbar ul li{
+
+  .header-navbar ul li {
     display: flex;
     justify-content: center;
     align-content: center;

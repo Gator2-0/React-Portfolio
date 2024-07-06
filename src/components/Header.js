@@ -46,8 +46,8 @@ function Header () {
             <span className="slide-in-text">by practicing! a lot!!</span>
           </div>
         ) : (
-          <div className='home-container'>
-            <Link to={'/'} className='home-link'>
+          <div className='home-button-container'>
+            <Link to={'/'} className='home-button-link'>
               <span >Home</span>
             </Link>
           </div>
