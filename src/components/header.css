@@ -76,7 +76,7 @@
   cursor: pointer;
 }
 
-/* styling of the menu part of the header */
+/* styling of the header navbar*/
 
 .header-navbar{
   width: 70%;
@@ -90,7 +90,7 @@
 }
 
 .header-navbar ul li{
-  margin: 50px;
+  margin: 5vh;
   font-size: 30px;
   font-family: 'Permanet Marker';
   cursor: pointer;
@@ -138,10 +138,12 @@
 
   .header-navbar ul {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .header-navbar ul li {
-    width: 98vw;
+    width: 90vw;
     display: flex;
     justify-content: center;
     overflow: hidden;
