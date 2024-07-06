@@ -64,7 +64,7 @@ function Header () {
             slideColor={slideColor}/>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to='/Bio'>
               <DominoSlide 
               content="Bio" 
@@ -72,11 +72,11 @@ function Header () {
               color={color} 
               slideColor={slideColor} />
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to='/Contact'>
               <DominoSlide 
-              content="Contact" 
+              content="About me" 
               fontSize="30px" 
               color={color} 
               slideColor={slideColor} />
