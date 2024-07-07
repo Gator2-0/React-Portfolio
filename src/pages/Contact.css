@@ -3,7 +3,7 @@
   display: flex;
 }
 
-.about-me{
+.about-me-container{
   flex:2;
   display: flex;
   flex-direction: column;
@@ -15,12 +15,15 @@
   margin-left: 2vh;
   height:10vh;
 }
+
+.about-me-text{
+  margin: 2vh;
+}
 .contact-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-right: 2vh;
 }
 
 .contact-details{
