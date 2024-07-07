@@ -20,7 +20,7 @@ body::-webkit-scrollbar {
 
 .scroll-intro{
   font-size: var(--home-p-font-size);
-  padding-top: 40vh;
+  padding-top: 25vh;
   height: 80vh;
   display: flex;
   justify-content: center;
