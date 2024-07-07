@@ -1,6 +1,13 @@
 .contact-main{
   min-height:60vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-container{
+  display: flex;
 }
 
 .about-me-container{
@@ -18,6 +25,8 @@
 
 .about-me-text{
   margin: 2vh;
+  width: 75%;
+  font-size: x-large;
 }
 .contact-container{
   display: flex;
