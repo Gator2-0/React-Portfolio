@@ -25,14 +25,9 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+}
 
-}
-.scroll-intro > p{
-  animation: zoom-fade-out linear forwards;
-  animation-timeline: view();
-  animation-range-end: 60vh;
-}
+
 
 @keyframes zoom-fade-out{
   from {opacity: 1; scale: 0.8;}

@@ -28,10 +28,10 @@ const Home = () => {
           <img src={dashboard} alt='in-house app dashboard'></img>
         </div>
         <div className='story-text'>
-          Learning about powershell opened my horizon and from it emerge a new opportunity: <br />
+          Learning about powershell opened my horizon and from it emerged a new opportunity: <br />
           <strong>building an app that would help further streamline my workflow.</strong> <br />
           After a longer-than-needed brainstorming on the app name, I started building it from the ground up.
-          React would serve the front end and to favourise integration with other tools, Python would serve teh back end. 
+          React would serve the front end and to favourise integration with other tools, Python would serve the back end. 
         </div>
       </div>
 
